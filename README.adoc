@@ -779,4 +779,4 @@ image:images/step9/25.PNG[]  +
 {blank} +
 
 
-*`Note`*: Please make sure that the data flow that was created by you is 'suspended' else it will be running continously.
+*`Note`*: $${\color{red}Please make sure that the data flow that was created by you is 'suspended' else it will be running continously.}$$
