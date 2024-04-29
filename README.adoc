@@ -115,7 +115,11 @@ Please use the login url: http://3.109.161.118/auth/realms/workshop/protocol/sam
 Enter the `Workshop Login Username` and `Workshop Login Password` that you obtained as part of `Step 0`. +
 (*Note*: Note that your Workshop Login Username would be something like `wuser00@workshop.com` and not just `wuser00`).
 
-image::images/step3/1.PNG[]
+image:images/step3/1-1a.PNG[] +
+
+If you are prompted to change password please change it and remember/note it. +
+image:images/step3/1-1b.PNG[] +
+
 
 You should be able to get the following home page of CDP Public Cloud.
 
