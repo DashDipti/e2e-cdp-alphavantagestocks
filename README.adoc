@@ -117,7 +117,7 @@ Enter the `Workshop Login Username` and `Workshop Login Password` that you obtai
 
 image:images/step3/1-1a.PNG[] +
 
-If you are prompted to change password please change it and remember/note it. +
+If you are prompted to update password please change it and remember/note it. +
 image:images/step3/1-1b.PNG[] +
 
 
