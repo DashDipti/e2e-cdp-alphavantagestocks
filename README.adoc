@@ -404,7 +404,8 @@ STORED AS iceberg;
 
 See the result to notice a message `Table has been created`.
 
-image:images/step6/7.PNG[]  +
+image:images/step6/7-1.PNG[]  +
+image:images/step6/7-2.PNG[]  +
 
 Let's now create our engineering process.
 
