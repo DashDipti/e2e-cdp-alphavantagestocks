@@ -535,7 +535,8 @@ Look for `meta-workshop-dataviz`. Then click the `Data VIZ` button on the right.
 image:images/step8/5.PNG[]  +
 
 You will access to the following window. Choose `DATA` on the upper menu bar next to the options of HOME, SQL, VISUALS. +
-image:images/step8/6.PNG[]  +
+image:images/step8/6-1.PNG[]  +
+image:images/step8/6-2.PNG[]  +
 
 Click `meta-workshop` option in the left pane and then click on `NEW DATASET` option on top.
 
@@ -598,7 +599,9 @@ Then on 'VISUALS' choose `Packed Bubbles`. +
 image:images/step8/13.PNG[]
 Your visual could be slighltly different from the image here.
 
-Make it PUBLIC by changing the option from `PRIVATE` to `PUBLIC`. Save it by clicking the `SAVE` button on the top.  You have succeeded to create a simple dashboard. Now, let's query our data and explore the time-travel and snapshot capabilties of Iceberg.
+Make it PUBLIC by changing the option from `PRIVATE` to `PUBLIC`. Save it by clicking the `SAVE` button on the top.  +
+image:images/step8/13.PNG[] +
+You have succeeded to create a simple dashboard. Now, let's query our data and explore the time-travel and snapshot capabilties of Iceberg.
 
 == Step 9: Query Iceberg Tables in Hue and Cloudera Data Visualization
 
