@@ -626,26 +626,12 @@ Our example will load the intraday stock daily since the free API does not give 
 After this we will be able to see the new ticker information in the dashboard and also *perform time travel using Iceberg!*
 
 === Step 9(b): Logging into Hue
-Click on `Home` option on top left corner to go to the landing page.
-
-image:images/step9/1.PNG[]  +
-
-From the CDP Portal or CDP Menu choose `Data Warehouse`.
-
-image:images/step9/2.PNG[]  +
 
 From the CDW `Overview` window, click the "HUE" button on the right corner as shown under the `Virtual Warehouses` to the right. Make sure that the correct 'Virtual Warehouse' is selected - In this case it is `meta-workshop-ww`.
 
 image:images/step9/3.PNG[]  +
 
-Now you're accessing to the sql editor called "HUE".
-
-image:images/step9/4.PNG[]  +
-
-Let's select the Impala engine that you will be using for interacting with database.
-On the top left corner select `</>` and select the Editor to be `Impala`.
-
-Make sure that you can see `Impala` instead of `Unified Analytics` on top of the area where you would write queries.
+Now you're accessing to the sql editor called "HUE". Make sure that you can see `Impala`.
 
 image:images/step9/5.PNG[]  +
 
@@ -674,7 +660,7 @@ Copy and paste the `snapshot_id` and use it on the following impala queries. Rep
 
 SELECT ticker, count(*)
 FROM ${user_id}_stocks.stock_intraday_1min
-FOR SYSTEM_VERSION AS OF <snapshot_id>
+FOR SYSTEM_VERSION AS OF ${snapshot_id}
 GROUP BY ticker;
 ----
 
