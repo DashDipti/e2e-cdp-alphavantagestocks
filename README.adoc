@@ -362,23 +362,18 @@ From the CDW `Overview` window, click the "HUE" button on the right corner as sh
 
 image:images/step6/3.PNG[]  +
 
-Now you're accessing to the sql editor called - `"HUE" (Hadoop User Experience)`.
+Now you're accessing to the sql editor called - `"HUE" (Hadoop User Experience)`. +
+
+Make sure that the Impala engine is selected to interact with the database. +
 
 image:images/step6/4.PNG[]  +
-
-Let's select the Impala engine that you will be using for interacting with database.
-On the top left corner select `</>` and select the Editor to be `Impala`.
-
-Make sure that you can see `Impala` instead of `Unified Analytics` on top of the area where you would write queries.
-
-image:images/step6/5.PNG[]  +
 
 Create database using your login `For example: wuser00`. Replace `<user>` by your username for database creation in the command below.
 
 [,sql]
 ----
 
-CREATE DATABASE <user>_stocks;
+CREATE DATABASE ${user_id}_stocks;
 ----
 
 See the result to notice a message `Database has been created`.
@@ -390,7 +385,7 @@ After creating the database create an Iceberg table. Replace `<user>` by your us
 [,sql]
 ----
 
-CREATE TABLE IF NOT EXISTS <user>_stocks.stock_intraday_1min (
+CREATE TABLE IF NOT EXISTS ${user_id}_stocks.stock_intraday_1min (
   interv STRING,
   output_size STRING,
   time_zone STRING,
