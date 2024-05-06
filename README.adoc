@@ -368,7 +368,7 @@ Make sure that the Impala engine is selected to interact with the database. +
 
 image:images/step6/4.PNG[]  +
 
-Create database using your login `For example: wuser00`. Replace `<user>` by your username for database creation in the command below.
+Create database using your login `For example: wuser00`. Replace `user_id` by your username for database creation in the command below.
 
 [,sql]
 ----
@@ -378,9 +378,10 @@ CREATE DATABASE ${user_id}_stocks;
 
 See the result to notice a message `Database has been created`.
 
-image:images/step6/6.PNG[]  +
+image:images/step6/6-1.PNG[]  +
+image:images/step6/6-2.PNG[]  +
 
-After creating the database create an Iceberg table. Replace `<user>` by your username for iceberg table creation in the command below.
+After creating the database create an Iceberg table. Replace `user_id` by your username for iceberg table creation in the command below.
 
 [,sql]
 ----
@@ -645,12 +646,12 @@ image:images/step9/5.PNG[]  +
 === Step 9(c): Iceberg snapshots
 
 Let's see the Iceberg table history.
-Replace <user> with your username. For example: `wuser00`.
+Replace `user_id` with your username. For example: `wuser00`.
 
 [,sql]
 ----
 
-DESCRIBE HISTORY <user>_stocks.stock_intraday_1min;
+DESCRIBE HISTORY ${user_id}_stocks.stock_intraday_1min;
 ----
 
 {blank} +
@@ -659,13 +660,13 @@ image:images/step9/6.PNG[]  +
 
 {blank} +
 
-Copy and paste the `snapshot_id` and use it on the following impala queries. Replace <user> with your username. For example: `wuser00`.
+Copy and paste the `snapshot_id` and use it on the following impala queries. Replace `user_id` with your username. For example: `wuser00`.
 
 [,sql]
 ----
 
 SELECT ticker, count(*)
-FROM <user>_stocks.stock_intraday_1min
+FROM ${user_id}_stocks.stock_intraday_1min
 FOR SYSTEM_VERSION AS OF <snapshot_id>
 GROUP BY ticker;
 ----
@@ -727,7 +728,7 @@ Now let check again the snapshot history by going to Hue.
 [,sql]
 ----
 
-DESCRIBE HISTORY <user>_stocks.stock_intraday_1min;
+DESCRIBE HISTORY ${user_id}_stocks.stock_intraday_1min;
 ----
 
 {blank} +
@@ -738,7 +739,7 @@ image:images/step9/22.PNG[]  +
 ----
 
 SELECT ticker, count(*)
-FROM <user>_stocks.stock_intraday_1min
+FROM ${user_id}_stocks.stock_intraday_1min
 FOR SYSTEM_VERSION AS OF <new_snapshot_id>
 GROUP BY ticker;
 ----
@@ -752,11 +753,11 @@ image:images/step9/23.PNG[]  +
 Now, we can see that this snapshot retrieves the count value for stock NVDA that has been added in the CDF `stock_list` parameter.
 
 === Show Data Files
-Replace <user> with your username. For example: `wuser00`.
+Replace `user_id` with your username. For example: `wuser00`.
 [,sql]
 ----
 
-show files in <user>_stocks.stock_intraday_1min;
+show files in ${user_id}_stocks.stock_intraday_1min;
 ----
 
 {blank} +
@@ -766,11 +767,11 @@ image:images/step9/24.PNG[]  +
 {blank} +
 
 
-Check the Iceberg table. Replace <user> with your username. For example: `wuser00`.
+Check the Iceberg table. Replace `user_id` with your username. For example: `wuser00`.
 [,sql]
 ----
 
-describe formatted <user>_stocks.stock_intraday_1min;
+describe formatted ${user_id}_stocks.stock_intraday_1min;
 ----
 
 {blank} +
