@@ -792,4 +792,4 @@ image:images/step9/26-3-suspend-deployment.PNG[]  +
 image:images/step9/26-4-suspend-deployment.PNG[]  +
 image:images/step9/26-5-suspend-deployment.PNG[]  +
 
-image:images/step0/thankyou.PNG[]  +
+image:images/step0/thankyou1.PNG[]  +
