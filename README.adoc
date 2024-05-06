@@ -6,7 +6,7 @@ Version : 1.0.0 `26th March 2024` +
 
 '''
 
-image:images/step0/HOL.PNG[]  +
+image:images/step0/landing.png[]  +
 
 == &#x25B6; Recording
 
