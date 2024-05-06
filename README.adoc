@@ -673,12 +673,17 @@ image:images/step9/7.PNG[]  +
 === Step 9(d): Add a New stock (NVDA)
 
 We shall load new data and this time we will include additional stock ticker - `NVDA`.
-Go to CDF, and find the data flow that you had created earlier. It should be in suspended state if you had suspended it towards the end of +
+Go to CDF, and find the data flow that you had created earlier. It should be in stopped state if you had stopped it towards the end of +
 `Step 5: Create the flow to ingest stock data via API to Object Storage` section of the workshop.
 
-Go to Cloudera Data Flow option and look for the flow that you had created earlier based on your user name. Ex - `wuser00_stock_dataflow`. Click on the arrow towards the right side of the flow and then click on `Manage Deployment`.
+image:images/step9/8-1.PNG[]  +
 
-image:images/step9/8.PNG[]  +
+Go to Cloudera Data Flow option and look for the flow that you had created earlier based on your user name. Ex - `wuser00_stock_dataflow`. 
+
+image:images/step9/8-2.PNG[]  +
+
+Click on the arrow towards the right side of the flow and then click on `Actions -> Manage Deployment`.
+image:images/step9/8-3.PNG[]  +
 
 image:images/step9/9.PNG[]  +
 
@@ -693,13 +698,16 @@ image:images/step9/12.PNG[]  +
 Now, start the flow again by clicking `Actions` and then `Start flow`.
 image:images/step9/13.PNG[]  +
 image:images/step9/14.PNG[]  +
+image:images/step9/14-1.PNG[]  +
 image:images/step9/15.PNG[]  +
 
 The S3 bucket gets updated with new data and this time it includes the new ticker 'NVDA' as well. We will see it. You can see the same in S3 bucket as shown here.
-image:images/step9/16.PNG[]  +
+image:images/step9/16-1.PNG[]  +
+image:images/step9/16-2.PNG[]  +
 
 Now go to Cloudera `Data Engineering` from the home page and `Jobs`. Choose the CDE Job that you had created earlier with your username.
-image:images/step9/17.PNG[]  +
+image:images/step9/17-1.PNG[]  +
+image:images/step9/17-2.PNG[]  +
 
 
 Click the 3 dots next to your job that you had created earloer and then click on `Run Now`.
@@ -733,7 +741,7 @@ image:images/step9/22.PNG[]  +
 
 SELECT ticker, count(*)
 FROM ${user_id}_stocks.stock_intraday_1min
-FOR SYSTEM_VERSION AS OF <new_snapshot_id>
+FOR SYSTEM_VERSION AS OF ${new_snapshot_id}
 GROUP BY ticker;
 ----
 
