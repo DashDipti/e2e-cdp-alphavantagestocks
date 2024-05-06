@@ -96,7 +96,7 @@ image:images/step1/3.PNG[] +
 
 image:images/step2/alphaVantagePortal.PNG[]
 
-. Choose 'Student' for the question - `Which of the following best describes you?`.
+. Choose `Student` for the question - `Which of the following best describes you?`.
 . Enter your own organisation name for the question - `Organization (e.g. company, university, etc.):`
 . Enter your email address for the question - `Email:` (Note: Please enter personal email id and not the workshop email id)
 . Click on `GET FREE API KEY`.
@@ -104,7 +104,7 @@ image:images/step2/alphaVantagePortal.PNG[]
 image:images/step2/claimApiKey.PNG[]
 
 
-You should see a message like - 'Welcome to Alpha Vantage! Your dedicated access key is: YXXXXXXXXXXXXXXE. 
+You should see a message like - `Welcome to Alpha Vantage! Your dedicated access key is: YXXXXXXXXXXXXXXE.` 
 `*Please record this API key at a safe place for future data access.*`
 
 image:images/step2/getKey.PNG[] +
@@ -502,7 +502,7 @@ image:images/step7/8.PNG[]  +
 You will reach the `Trends` option.
 image:images/step7/9.PNG[]  +
 
-Click the `Logs` and go through the various tabs like 'stderr+stdout' to understand better.
+Click the `Logs` and go through the various tabs like `stderr+stdout` to understand better.
 image:images/step7/10.PNG[]  +
 
 Under `Logs` tab check for the following. In most of the cases `Processing temp dirs` indicates that job would run successfully and is in it's last stages.
@@ -578,7 +578,7 @@ image:images/step8/10.PNG[]
 You'll land in the following page.
 image:images/step8/11.PNG[]
 
-Let's drag from `DATA` section on the right under `Dashboard Designer` the following attribute/metric. And the 'REFRESH THE VISUAL'
+Let's drag from `DATA` section on the right under `Dashboard Designer` the following attribute/metric. And the `REFRESH THE VISUAL`
 
 `Dimensions` \-> `ticker` +
 
@@ -594,7 +594,7 @@ ____
 
 image:images/step8/12.PNG[]
 
-Then on 'VISUALS' choose `Packed Bubbles`. +
+Then on `VISUALS` choose `Packed Bubbles`. +
 
 image:images/step8/13.PNG[]
 Your visual could be slighltly different from the image here.
@@ -627,7 +627,7 @@ After this we will be able to see the new ticker information in the dashboard an
 
 === Step 9(b): Logging into Hue
 
-From the CDW `Overview` window, click the "HUE" button on the right corner as shown under the `Virtual Warehouses` to the right. Make sure that the correct 'Virtual Warehouse' is selected - In this case it is `meta-workshop-ww`.
+From the CDW `Overview` window, click the "HUE" button on the right corner as shown under the `Virtual Warehouses` to the right. Make sure that the correct `Virtual Warehouse` is selected - In this case it is `meta-workshop-ww`.
 
 image:images/step9/3.PNG[]  +
 
@@ -691,7 +691,7 @@ Click on the `Parameters` tab and then scroll down to the text box where you had
 
 image:images/step9/10.PNG[]  +
 
-Add the stock 'NVDA'. And then click on `Apply Changes`.
+Add the stock `NVDA`. And then click on `Apply Changes`.
 image:images/step9/11.PNG[]  +
 image:images/step9/12.PNG[]  +
 
@@ -701,7 +701,7 @@ image:images/step9/14.PNG[]  +
 image:images/step9/14-1.PNG[]  +
 image:images/step9/15.PNG[]  +
 
-The S3 bucket gets updated with new data and this time it includes the new ticker 'NVDA' as well. We will see it. You can see the same in S3 bucket as shown here.
+The S3 bucket gets updated with new data and this time it includes the new ticker `NVDA` as well. We will see it. You can see the same in S3 bucket as shown here.
 image:images/step9/16-1.PNG[]  +
 image:images/step9/16-2.PNG[]  +
 
@@ -720,7 +720,7 @@ image:images/step9/21.PNG[]  +
 
 {blank} +
 
-As CDF has ingested a new stock value and then CDE has merged those value it has created new Iceberg snapshots. Copy and paste the new 'snapshot_id' and use it on the following impala query.
+As CDF has ingested a new stock value and then CDE has merged those value it has created new Iceberg snapshots. Copy and paste the new `snapshot_id` and use it on the following impala query.
 
 === Step 9(e): Check new snapshot history
 
@@ -782,4 +782,4 @@ image:images/step9/25.PNG[]  +
 {blank} +
 
 
-*`Note`*: 	&#x1F534; Please make sure that the data flow that was created by you is 'suspended' else it will be running continously. 
+*`Note`*: 	&#x1F534; Please make sure that the data flow that was created by you is `suspended` else it will be running continously. 
