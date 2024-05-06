@@ -782,4 +782,10 @@ image:images/step9/25.PNG[]  +
 {blank} +
 
 
-*`Note`*: 	&#x1F534; Please make sure that the data flow that was created by you is `suspended` else it will be running continously. 
+*`Note`*: 	&#x1F534; Please make sure that the data flow that was created by you is `Suspended` else it will be running continously. To suspend the flow, do the following.
+
+image:images/step9/26-1-suspend-deployment.PNG[]  +
+image:images/step9/26-2-suspend-deployment.PNG[]  +
+image:images/step9/26-3-suspend-deployment.PNG[]  +
+image:images/step9/26-4-suspend-deployment.PNG[]  +
+image:images/step9/26-5-suspend-deployment.PNG[]  +
