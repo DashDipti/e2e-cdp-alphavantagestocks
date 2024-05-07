@@ -1,8 +1,8 @@
 = Cloudera Technical Workshop
 
 '''
-Test
-Version : 1.0.0 `26th March 2024` +
+
+Version : 1.0.0 `07th May 2024` +
 
 '''
 
